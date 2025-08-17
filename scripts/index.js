@@ -90,7 +90,7 @@ $(document).ready(function() {
     //adds the person in the people array
     function addPerson() {
         var fieldsEntered = true;
-        $("input[type == 'text']").each(function(index, inputElement) {
+        $("input[type= 'text']").each(function(index, inputElement) {
             if($(inputElement).val() == "") {
                 fieldsEntered = false;
                 return false;
