@@ -1,4 +1,4 @@
-const { info } = require("sass");
+
 
 $(document).ready(function() {
     //forming a constructor named person
@@ -38,24 +38,24 @@ $(document).ready(function() {
 
     //Event subscriptions
     //subscribe to events
-    personEntryBtn.click(personEntryToggle());
-    reviewBtn.click(reviewToggle());
-    addPersonBtn.click(addPerson());
-    peopleDropdown.change(addonchange());
-    $(document).keypress(onEntrPress());
+    personEntryBtn.click(personEntryToggle);
+    reviewBtn.click(reviewToggle);
+    addPersonBtn.click(addPerson);
+    peopleDropdown.change(addonchange);
+    $(document).keypress(onEnterPress);
 
     //event handler functions
     //handles opening/ closing of person entry fieldset
     var formShow = true;
     function personEntryToggle() {
         if (formShow) {
-            entryField.hide(showHideSpeed);
+            entryFields.hide(showHideSpeed);
             //personEntryBtn.text("Add Person");
         } else {
-            entryField.show(showHideSpeed);
+            entryFields.show(showHideSpeed);
             //personEntryBtn.text("Hide Person Entry");
         }
-        formShown = !formShown;
+        formShow = !formShow;
     }
 
     //handles openig/ closing of review fieldset
@@ -73,13 +73,14 @@ $(document).ready(function() {
 
     //handles changing of dropdown options
     function addonchange() {
-        var address = peopleArray[$(this).val()].address;
-        var city = peopleArray[$(this).val()].city;
+        var index = $(this).val();
+        var address = peopleArray[index].address;
+        var city = peopleArray[index].city;
         displayAddress.html(address + ", " + city);
     }
 
     //handles enter press on the page
-    function onEntrPress(event) {
+    function onEnterPress(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
             addPerson();
@@ -112,7 +113,7 @@ $(document).ready(function() {
 
     //shows the seletcted persons data
     function showPerson() {
-        peopleDropdoen.children().remove();
+        peopleDropdown.children().remove();
 
         $(peopleArray).each(function (index, person) {
             var fullName = person.firstName + " " + person.lastName;
