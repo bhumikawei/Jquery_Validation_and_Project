@@ -1,0 +1,99 @@
+/* === Cyberpunk Registration Form === */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #0b0b0c, #000);
+  font-family: 'Orbitron', sans-serif; /* optional: futuristic font */
+  color: #f6f6f7;
+}
+
+form {
+  background: rgba(18, 18, 24, 0.9);
+  border: 2px solid rgba(255, 20, 147, 0.4);
+  border-radius: 16px;
+  padding: 32px;
+  width: 380px;
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.6),
+              0 0 40px rgba(138, 43, 226, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff79c6; /* hot pink */
+  text-shadow: 0 0 6px rgba(255, 20, 147, 0.8);
+}
+
+.form-control,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 20, 147, 0.5);
+  border-radius: 10px;
+  background: #0f0f12;
+  color: #f6f6f7;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-control:focus,
+select:focus {
+  border-color: #da70d6; /* orchid violet */
+  box-shadow: 0 0 12px #ff1493, 0 0 25px #8a2be2;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff1493, #8a2be2);
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0 15px #ff1493, 0 0 30px #8a2be2;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #ff1493, 0 0 40px #8a2be2;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Optional: add a glowing neon border animation */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px #ff1493, 0 0 40px #8a2be2;
+  }
+  50% {
+    box-shadow: 0 0 25px #8a2be2, 0 0 50px #ff1493;
+  }
+}
+form:hover {
+  animation: neonPulse 2s infinite alternate;
+}
+
+.form-control.error{
+    border: 1px solid red;
+}
+label.error {
+    color: red;
+}
