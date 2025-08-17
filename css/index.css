@@ -1,0 +1,106 @@
+/* === Cherry Red Glow Theme === */
+body {
+  margin: 0;
+  padding: 30px;
+  background: #0a0a0a;
+  color: #f2f2f2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* fieldset container */
+fieldset {
+  border: 2px solid rgba(220, 20, 60, 0.6); /* cherry red */
+  border-radius: 14px;
+  margin-bottom: 26px;
+  padding: 20px;
+  background: rgba(15, 15, 15, 0.85);
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.45);
+}
+
+/* legend button */
+legend {
+  padding: 0 10px;
+}
+legend button {
+  background: linear-gradient(90deg, #ff1e42, #b3001b);
+  border: none;
+  padding: 8px 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 30, 66, 0.7),
+              0 0 20px rgba(179, 0, 27, 0.4);
+}
+legend button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 30, 66, 0.9),
+              0 0 30px rgba(179, 0, 27, 0.6);
+}
+
+/* table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+.column1 {
+  width: 130px;
+  font-weight: bold;
+  color: #ff5a5a;
+  text-shadow: 0 0 6px rgba(220, 20, 60, 0.8);
+}
+
+/* inputs and select */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 30, 66, 0.5);
+  border-radius: 8px;
+  background: #111;
+  color: #f2f2f2;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+input[type="text"]:focus,
+select:focus {
+  border-color: #ff1e42;
+  box-shadow: 0 0 10px rgba(255, 30, 66, 0.7),
+              0 0 20px rgba(179, 0, 27, 0.4);
+}
+
+/* Add Person button */
+#addPersonBtn {
+  background: linear-gradient(90deg, #ff1e42, #b3001b);
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 30, 66, 0.7),
+              0 0 20px rgba(179, 0, 27, 0.4);
+}
+#addPersonBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 30, 66, 0.9),
+              0 0 35px rgba(179, 0, 27, 0.6);
+}
+
+/* info & display address */
+#info,
+#displayAddress {
+  color: #ffcccc;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* smooth transitions for entry/review panels */
+#entry,
+#review {
+  transition: all 0.3s ease-in-out;
+}
