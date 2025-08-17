@@ -45,8 +45,8 @@ $(document).ready(function() {
                 }
             }
         })
-        if(regForm.valid() {
+        if(regForm.valid()) {
             //AJAX call to submit the form data
-        })
+        }
     })
 })
